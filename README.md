@@ -12,7 +12,7 @@
 
 ## Index
 
-- [web-accessibility](./webweb-accessibility)
+- [web-accessibility](https://github.com/hellomac87/TIL/tree/master/web-accessibility)
 
 
 
