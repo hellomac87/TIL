@@ -31,3 +31,8 @@ css
 ```
 가상선택자 속성으로 배경이미지를 heading tag 의 텍스트 위로 덮어쓰게 한다.
 배경이미지나 css를 불러오지 못했을 경우에는 기본 text가 제공된다.
+
+## ref
+
+- 다음 - 다룸 - IR 기법
+    - [http://ui.daum.net/convention/css/css_ir](http://ui.daum.net/convention/css/css_ir)
