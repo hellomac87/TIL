@@ -13,6 +13,11 @@
 1. 컴포넌트에서 자식 컴포넌트로 이벤트를 어떻게 전달하는가?
 1. 자식 컴포넌트는 부모 컴포넌트와 어떻게 상호작용 하는가?
 
+## callback in react
+
+![react callback](./images/call-back-fuc-img.png)
+[출처](https://medium.com/@thejasonfile/callback-functions-in-react-e822ebede766)
+
 ## Ref
 - [React 공식문서 - Handling Events](https://reactjs.org/docs/handling-events.html)
 - [React 공식문서 - Passing Functions to Components](https://reactjs.org/docs/faq-functions.html)
