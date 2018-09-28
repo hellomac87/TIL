@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    position: relative;
+    background: #14bdac;
+}
+.wrap{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border:1px solid #00a492;
+}
+.box{
+    border:1px solid #00a492;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
