@@ -366,7 +366,20 @@ gcd(24,11);
 ### 문제 12
 
 세 수를 입력받아 큰 것부터 차례대로 출력하는 함수를 작성하세요.
+```js
+function larger(a, b, c){
+  if(a > b && a > c){
+    return a;
+  }else if(b > a && b > c){
+    return b;
+  }else if(c > a && c > b){
+    return c;
+  }
+  throw new Error('서로 다른 값을 입력해 주세요.');
+}
 
+larger(15, 1, 3);
+```
 ### 문제 13
 
 자연수 `n`을 입력받아, `n`번째 피보나치 수를 반환하는 함수를 작성하세요.
