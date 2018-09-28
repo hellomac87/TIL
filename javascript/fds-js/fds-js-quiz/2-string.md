@@ -117,6 +117,19 @@ countChar('aaaabbbqqzz');
 
 문자열을 입력받아 그 문자열이 회문(palindrome)인지 판별하는 함수를 작성하세요. (회문이란, '토마토', 'never odd or even'과 같이 뒤에서부터 읽어도 똑같이 읽히는 문자열을 말합니다.)
 
+#### my answer
+
+```js
+function check(str){
+  const normal = [...str].filter(function(n){ return n !== ' '}).join('');
+  const reverse = [...str].reverse().filter(function(n){ return n !== ' '}).join(''); // 배열로 만들었다 거꾸로해서 합치기
+
+  return normal === reverse ? true : false ;
+}
+
+check('never odd or even');
+```
+
 ---
 ### 문제 6
 
@@ -126,6 +139,10 @@ countChar('aaaabbbqqzz');
 ```
 subString('햄버거');
 // 결과: ['햄', '햄버', '햄버거', '버', '버거', '거']
+```
+
+#### my answer
+```js
 ```
 
 ---
