@@ -40,3 +40,26 @@
 1. 조건식이 빠졌기 때문인거같음
 1. 데이터 배열 방식도 조금 바꿔봄
 1. 조금 더 생각해보자
+
+## 2018-09-29 - 2
+```js
+const state = {
+    user: 'O',
+    boxes: [],
+};
+
+const boxes = document.querySelectorAll('.box'); // box dom node array
+
+state.boxes = Array.from(boxes).map(function(box, index){
+    return box.getAttribute('data');
+}); 
+// or
+state.boxes = [...boxes].map(function(box, index){
+    return box.getAttribute('data');
+}); 
+// save state boxes array;
+// 쿼리 셀렉터 올은 반환값이 NodeList임
+// NodeList는 Array 객체가 아님
+// 따라서 위에처럼 변환해줘야 map 메서드를 쓸 수 있음
+```
+[https://stackoverflow.com/questions/32765157/filter-or-map-nodelists-in-es6](https://stackoverflow.com/questions/32765157/filter-or-map-nodelists-in-es6)
