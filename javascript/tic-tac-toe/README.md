@@ -63,3 +63,10 @@ state.boxes = [...boxes].map(function(box, index){
 // 따라서 위에처럼 변환해줘야 map 메서드를 쓸 수 있음
 ```
 [https://stackoverflow.com/questions/32765157/filter-or-map-nodelists-in-es6](https://stackoverflow.com/questions/32765157/filter-or-map-nodelists-in-es6)
+
+## 2018-09-30
+
+1. 승리 조건을 어떤식으로 구성할지 생각중
+2. 유투브에서 zerocho님 영상 시청
+3. 영상초반 순서도 작성이 알고리즘 연습에 좋다고 해서
+4. 틱택토 순서도를 그려보기 시작
