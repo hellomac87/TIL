@@ -130,6 +130,22 @@ function check(str){
 check('never odd or even');
 ```
 
+```js
+function check(str){
+  for(let i=0; i<str.length; i++){
+    const n = i + 1;
+    if(str[i] !== str[str.length - n]){
+      return false;
+    }
+  }
+  return true;
+}
+
+check('토마토마토');
+```
+```js
+
+```
 ---
 ### 문제 6
 
@@ -157,6 +173,26 @@ removeDuplicates('tomato'); -> 'toma'
 removeDuplicates('bartender'); -> 'bartend'
 ```
 
+#### my answer
+
+```js
+function removeDuplicates(str){
+  let memory = '';
+  
+  for(let i = 0; i < str.length; i++){
+    if(memory.includes(str[i])){
+      // 이전에 본적이 있으면 추가하지앟는다
+      continue;
+    }else{
+      // 이전에 본적이 없으면 추가한다.
+      memory += str[i];
+    }
+  }
+  return memory;
+}
+
+removeDuplicates('bartender');
+```
 ---
 
 ### 문제 8
@@ -166,6 +202,41 @@ removeDuplicates('bartender'); -> 'bartend'
 - 루프로 먼저 풀어보세요.
 - `split` 메소드를 이용해서 풀어보세요.
 
+```js
+function masking(email){
+  let memory = '';
+  let seen = false;
+
+  for(let i=0; i < email.length; i++){
+    if(email[i] === '@'){
+      seen = true;   
+    }
+    if(!seen){
+      // @ 을 본적이 없다 => 별을 저장  
+      memory += '*';
+    }else{
+      // @ 을 봤다 => 고대로저장
+      memory += email[i];
+    }
+  }
+
+  return memory;
+}
+
+masking('hellomac87@gmail.com');
+```
+
+```js
+function masking(email){
+  email = email.split('@');
+  email[0] = '*'.repeat(email[0].length);
+  email = email[0].concat('@', email[1]);
+
+  return email;
+}
+
+masking('hellomac87@gmail.com');
+```
 ---
 
 ### 문제 9

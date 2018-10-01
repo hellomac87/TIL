@@ -254,6 +254,25 @@ function makeNameHard(num){
 makeNameHard(5);
 
 ```
+
+#### 강사님과 함께 풀어보기
+
+```js
+function isPrime(num){
+  // 소수는 1과 자기 자신 밖에 약수가 없는 수
+  // 1과 자기 자신이 아닌약수가 하나라도 있으면 소수가 아니다.
+
+  for(let i = 2; i < num; i++){
+    if( num % i === 0){
+      return false;
+    }
+  }
+  return true;
+}
+```
+
+소수 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+
 ---
 ### 문제 8
 
@@ -339,6 +358,34 @@ function starPrint(num){
 
 starPrint(15);
 ```
+
+#### 강사님과 함께 풀어보기
+```js
+function printStar(height){
+  for(let i = 0; i < height; i++){
+    // 한줄 출력
+    let stars = '';
+    for(let j = 0; j < i+1; j++){
+      // 별표 하나를 출력
+      stars += '* '
+    }
+    console.log(stars);
+  }
+}
+
+printStar(5);
+```
+
+```js
+function printStar(height){
+  for(let i = 0; i < height; i++){
+    console.log(('* ').repeat(i));
+  }
+}
+
+printStar(5)
+```
+
 ---
 ### 문제 10
 
@@ -396,6 +443,29 @@ for(let i=0; i<num-1; i++){
   star+='\n';
 }
 console.log(star);
+```
+
+#### 강사님과 함께 풀어보기
+
+```js
+function printLine(height, i) {
+  const n = i + 1;
+  let line = '';
+
+  line = ' '.repeat(height - n) + '* '.repeat(n);
+  console.log(line);
+}
+
+function starPrint(height) {
+  for (let i = 0; i < height; i++) {
+    printLine(height, i);
+  }
+  for (let i = height - 2; i >= 0; i--) {
+    printLine(height, i);
+  }
+}
+
+starPrint(5)
 ```
 ---
 ### 문제 11
