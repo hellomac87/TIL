@@ -112,6 +112,27 @@ function countChar(str){
 
 countChar('aaaabbbqqzz');
 ```
+#### 강사님과 함께 풀어보기
+
+```JS
+function countChar(str){
+  const obj = {}; // 객체 선언
+
+  for(let i=0; i<str.length; i++){    
+    if( !(str[i] in obj)){
+      // 글자를 본적이 없다면 "글자": 1을 적어준다.
+      obj[str[i]] = 1;
+    }else{
+      // 글자를 본적이 있다면 횧수를 1 증가시켜준다.
+      obj[str[i]] += 1;
+    }    
+  }
+
+  return obj;
+}
+
+countChar('aaaabbbqqzz');
+```
 ---
 ### 문제 5
 
@@ -202,6 +223,7 @@ removeDuplicates('bartender');
 - 루프로 먼저 풀어보세요.
 - `split` 메소드를 이용해서 풀어보세요.
 
+#### my answer
 ```js
 function masking(email){
   let memory = '';
@@ -243,21 +265,130 @@ masking('hellomac87@gmail.com');
 
 문자열을 입력받아, 대문자는 소문자로, 소문자는 대문자로 바꾼 결과를 반환하는 함수를 작성하세요.
 
+#### my answer
+
+```js
+function change(str){
+  let result = '';
+  
+  for(let i=0; i<str.length; i++){
+    let upper = str[i].toUpperCase();
+    let lower = str[i].toLowerCase();
+    if(str[i] === upper){
+      result += lower;
+    }else{
+      result += upper;
+    }
+  }
+  return result;
+}
+
+change('Hello World');
+```
+
+```js
+function change(str){
+  return str = str.split('').map(item => item === item.toLowerCase() ? item.toUpperCase() : item.toLowerCase()).join('');
+}
+
+change('String RIng ArRAy');
+```
 ### 문제 10
 
 문자열을 입력받아, 각 단어의 첫 글자를 대문자로 바꾼 결과를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
+
+#### my answer
+
+```js
+function changeStr(str){
+  let result = '';
+  
+  for(let i=0; i<str.length; i++){
+    if(str[i-1] === ' ' || str[i] === str[0]){
+      result += str[i].toUpperCase();
+    }else{
+      result += str[i]
+    }
+  }
+  return result;
+}
+
+changeStr('hello javascript and react');
+```
 
 ### 문제 11
 
 문자열을 입력받아, 문자열 안에 들어있는 단어 중 가장 긴 단어를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
 
+#### my answer
+
+```js
+function larger(str){
+  str = str.split(' ');
+  // 배열의 길이를 비교하여 가장 큰 배열을 리턴한다
+  for(let i=0; i<str.length; i++){
+    if(str[i].length - str[i+1].length > 0){
+      return str[i];
+    }
+  }
+}
+```
+
+```js
+function campare(str){
+  str = str.split(' ').sort((x, y) => y.length - x.length);
+
+  return str[0];
+}
+```
+
 ### 문제 12
 
 문자열 `s`과 자연수 `n`을 입력받아, `s`의 첫 `n`개의 문자만으로 이루어진 새 문자열을 반환하는 함수를 작성하세요.
 
+#### my answer
+
+```js
+function handleStr(str, n){
+  let newStr = '';
+
+  for(let i=0; i<n; i++){
+    newStr += str[i];
+  }
+  return newStr;
+}
+
+handleStr('hello', 3);
+```
+
 ### 문제 13
 
 Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
+
+#### my answer
+
+```js
+function snakeCase(str){
+  let snake = '';
+
+  for(let i=0; i<str.length; i++){
+    if(str[i] === str[i].toUpperCase()){
+      
+      if(i !== 0){
+        snake += '_' + str[i].toLowerCase();
+      }else{
+        snake += str[i].toLowerCase();
+      }
+      
+    }else{
+      snake += str[i];
+    }
+    
+  }
+  return snake;
+}
+snakeCase('CamelCaseString');
+```
 
 ### 문제 14
 
