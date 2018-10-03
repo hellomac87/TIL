@@ -370,29 +370,42 @@ Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 �
 ```js
 function snakeCase(str){
   let snake = '';
-
+  
   for(let i=0; i<str.length; i++){
     if(str[i] === str[i].toUpperCase()){
-      
-      if(i !== 0){
         snake += '_' + str[i].toLowerCase();
-      }else{
-        snake += str[i].toLowerCase();
-      }
-      
     }else{
       snake += str[i];
     }
-    
   }
   return snake;
 }
-snakeCase('CamelCaseString');
+
+snakeCase('camelCaseString');
 ```
 
 ### 문제 14
 
 Snake case의 문자열을 입력받아, camel case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
+
+```js
+function makeCamel(str){
+  let result ='';
+  for(let i=0; i<str.length; i++){
+    if(str[i] === '_'){
+      result += '';
+    }else if(str[i-1] === '_'){
+      result += str[i].toUpperCase();
+    }else{
+      result += str[i];
+    }
+  }
+
+  return result;
+}
+
+makeCamel('snake_case_is_good');
+```
 
 ### 문제 15
 
