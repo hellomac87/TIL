@@ -40,6 +40,27 @@ function sum(arr){
   }else{
     result = arr.reduce((a, b) => a + b, 0);
   }
+ 
+  return result;
+}
+
+sum([1,2,3,4,5,6,7,8,9,10]);
+```
+```js
+function checkTypeNum(arr){
+  return arr.every(item => typeof item === 'number');
+}
+
+function sum(arr){
+  let result = new Number();
+
+  if(!checkTypeNum(arr)){
+    throw new Error('수타입의 값만으로 이루어진 배열을 입력해주세요');
+  }else{
+    for(let i=0; i<arr.length; i++){
+      result += Number(arr[i]);
+    }
+  }
   
   return result;
 }
@@ -54,6 +75,32 @@ sum([1,2,3,4,5,6,7,8,9,10]);
 #### my answer
 ```js
 
+function makeArr(arr){
+  const result = [];
+  arr.map(function(item){
+    if(Boolean(item)){
+      result.push(item);
+    }
+  });
+  return result;
+}
+
+makeArr([1, '', 2, undefined, 3, null, 4, false, 5]);
+
+```
+
+```js
+function makeArr(arr){
+  const result = [];
+  arr.map(function(item){
+    if(item){
+      result.push(item);
+    }
+  });
+  return result;
+}
+
+makeArr([1, '', 2, undefined, 3, null, 4, false, 5]);
 ```
 ---
 ### 문제 4
@@ -61,6 +108,22 @@ sum([1,2,3,4,5,6,7,8,9,10]);
 배열을 입력받아, 중복된 요소가 제거된 새 배열을 반환하는 함수를 작성하세요.
 
 #### my answer
+
+```js
+// 배열을 입력받아, 중복된 요소가 제거된 새 배열을 반환하는 함수를 작성하세요.
+function removeDuplicate(arr){
+  const newArr = [];
+
+  arr.map(function(item){
+    if(!newArr.includes(item)){
+      newArr.push(item);
+    }
+  });
+
+  return newArr;
+}
+removeDuplicate([1,1,'a',2,2,'b',3,3,'c','c','c']);
+```
 
 ---
 ### 문제 5
@@ -75,7 +138,25 @@ addArray([1, 2, 3], [4, 5, 6, 7]) -> [5, 7, 9, 7]
 ```
 
 #### my answer
+```js
+function addArray(arr1, arr2){
+  const newArr = [];
+  const longLength = Math.max(arr1.length, arr2.length); // 두 배열 길이 비교, 긴 배열길이를 저장
+  
+  for(let i=0; i<longLength; i++){
+      if(arr1[i] === undefined){
+        newArr.push(arr2[i] + 0);
+      }else if(arr2[i] === undefined){
+        newArr.push(arr1[i] + 0);
+      }else{
+        newArr.push(arr1[i] + arr2[i]);
+      }
+  }
+  return newArr;
+}
 
+addArray([1, 2, 3], [4, 5, 6, 7])
+```
 ---
 ### 문제 6
 
@@ -88,6 +169,21 @@ combination([1, 2, 3]); -> [[1, 2], [1, 3], [2, 3]]
 
 #### my answer
 
+```js
+function combination(arr){
+  const newArr = [];
+  
+  for(let i=0; i<arr.length; i++){
+    for(let j=i+1; j<arr.length; j++ ){
+      newArr.push([arr[i], arr[j]]);
+    }
+  }
+  return newArr;
+}
+
+combination([1,2,3]);
+
+```
 ---
 ### 문제 7
 

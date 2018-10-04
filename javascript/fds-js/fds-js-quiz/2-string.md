@@ -342,6 +342,30 @@ function campare(str){
 }
 ```
 
+#### 강사님과 함께 풀어보기
+
+```js
+// forloop
+function longestWord(str){
+  let longest = '';
+  let current = '';
+
+  for(let i=0; i<str.length; i++){
+    if(str[i] !== ' '){
+      current += str[i]
+      if(current.length > longest.length){
+        longest = current
+      }
+    }else{
+      current = '';
+    }
+  }
+  return longest;
+}
+
+longestWord('hellsadasdasdasdo javascript aasdsdasdad');
+```
+
 ### 문제 12
 
 문자열 `s`과 자연수 `n`을 입력받아, `s`의 첫 `n`개의 문자만으로 이루어진 새 문자열을 반환하는 함수를 작성하세요.
@@ -360,7 +384,22 @@ function handleStr(str, n){
 
 handleStr('hello', 3);
 ```
+```js
+function handleStr(str, n){
+  if(str.length < n){
+    throw new Error('alert');
+  }
+  
+  let newStr = '';
 
+  for(let i=0; i<n; i++){
+    newStr += str[i];
+  }
+  return newStr;
+}
+
+handleStr('hello', 3);
+```
 ### 문제 13
 
 Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
@@ -418,6 +457,26 @@ split('Hello World', ' '); -> ['Hello', 'World']
 split('let,const,var', ',') -> ['let', 'const', 'var']
 ```
 
+```js
+function split(str, sep){
+  let memory = '';
+  const arr = [];
+
+  for(let i=0; i<str.length; i++){
+    if(str[i] !== sep ){
+      memory += str[i];
+    }else{
+      arr.push(memory);
+      memory = '';
+    }
+  }
+  
+  arr.push(memory);
+  return arr;
+}
+
+split('let, const, var', ',');
+```
 ### 문제 16
 
 2진수를 표현하는 문자열을 입력받아, 그 문자열이 나타내는 수 타입의 값을 반환하는 함수를 작성하세요. (`parseInt`를 사용하지 말고 작성해보세요.)
