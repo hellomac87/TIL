@@ -203,6 +203,20 @@ coins(263, [100, 50, 10, 5, 1]);
 ```
 
 #### my answer
+```js
+function coins(n, arr){
+  let i = n;
+
+  for(let j=0; j<arr.length; j++){
+    while(i >= arr[j]){
+      i = i - arr[j];
+      console.log(arr[j]);  
+    }
+  }
+}
+
+coins(2263, [500,100, 50, 10, 5, 1]);
+```
 
 ---
 ### 문제 8
