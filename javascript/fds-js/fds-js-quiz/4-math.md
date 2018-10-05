@@ -31,3 +31,23 @@ ceilBy5(37); -> 40
 ### 문제 7
 
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 표준편차를 구하는 함수를 작성하세요.
+```js
+// 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 표준편차를 구하는 함수를 작성하세요.
+
+function standard(arr){
+  // arr 의 평균 구하기
+  let avg = arr.reduce((acc, item) => acc + item, 0) / arr.length;
+  console.log(avg);
+  // 각 요소의 편차 구하기,  각 요소에 제곱하기
+  let deviation = arr.map((item) => (item - avg) ** 2); 
+  // 위 제곱한 배열의 평균 구하기
+  console.log(deviation);
+  let result = deviation.reduce((a,b) => a + b,0) / deviation.length;
+  // 루트 씌우기
+  result = Math.sqrt(result);
+
+  return result;
+}
+
+standard([1,2,3,4,5]);
+```

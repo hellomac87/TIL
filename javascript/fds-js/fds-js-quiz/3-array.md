@@ -215,9 +215,26 @@ function coins(n, arr){
   }
 }
 
-coins(2263, [500,100, 50, 10, 5, 1]);
+coins(2263, [500,100, 50, 10, 5, 1]); 
 ```
+```js
+function coins(n, coinTypes){
+  coinTypes.sort((x,y) => y -x );
 
+  let remain = n;
+  let currentIndex = 0;
+
+  while(remain > 0 && currentIndex < coinTypes.length){
+    if(remain >= coinTypes[currentIndex]){
+      console.log(coinTypes[currentIndex]);
+      remain -= coinTypes[currentIndex]
+    }else{
+      currentIndex++
+    }
+  }
+}
+coins(263, [100,50,10,5,1]);
+```
 ---
 ### 문제 8
 
