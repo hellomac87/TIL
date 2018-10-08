@@ -17,6 +17,13 @@ circle(5);
 
 두 정수 `min`, `max` 를 입력받아, `min` 이상 `max` 미만인 임의의 정수를 반환하는 함수를 작성하세요.
 
+```js
+function random(min, max){
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+random(-10, 10);
+```
 ### 문제 3
 
 정수를 입력받아, 5 단위로 올림한 수를 반환하는 함수를 작성하세요.

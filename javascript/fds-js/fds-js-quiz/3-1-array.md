@@ -112,25 +112,6 @@ bingo([
 ]) // -> true
 ```
 ```js
-// bingo([
-//   [0, 1, 0],
-//   [0, 1, 1],
-//   [0, 0, 1]
-// ]) // -> false
-
-// bingo([
-//   [1, 1, 0],
-//   [0, 1, 1],
-//   [0, 0, 1]
-// ]) // -> true
-
-// bingo([
-//   [0, 1, 0],
-//   [0, 1, 1],
-//   [0, 1, 1]
-// ]) // -> true
-
-
 // 가로 빙고
 // 1) arr[0][0] === arr[0][1] && arr[0][0] === arr[0][2]
 // 2) arr[1][0] === arr[1][1] && arr[1][0] === arr[1][2]
@@ -166,8 +147,7 @@ function bingo(arr) {
       console.log(arr[i][j]);
     }
   }
-  
-  
+    
   // 대각선
   const crossArr = [];
   arr.map((item, index) => {
@@ -191,7 +171,6 @@ function bingo(arr) {
   }else{
     console.log('not bingo')
   }
-  
 }
 
 bingo([
