@@ -2,6 +2,17 @@
 
 양수를 입력받아 이 수를 반지름으로 하는 원의 넓이를 반환하는 함수를 작성하세요.
 
+```js
+// 넓이 = π x 반지름^2 (넓이=파이 x 반지름 제곱)
+function circle(num){
+  const result = 3.14 * (num ** 2);
+
+  return result;
+}
+
+circle(5);
+```
+
 ### 문제 2
 
 두 정수 `min`, `max` 를 입력받아, `min` 이상 `max` 미만인 임의의 정수를 반환하는 함수를 작성하세요.
@@ -23,7 +34,18 @@ ceilBy5(37); -> 40
 ### 문제 5
 
 임의의 HTML 색상 코드를 반환하는 함수를 작성하세요.
+```js
+function makeColor(){
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  const a = (Math.random()).toFixed(2);
 
+  return rgb = `rgb(${r}, ${g}, ${b}, ${a})`;
+}
+
+makeColor();
+```
 ### 문제 6
 
 양수를 입력받아, 그 수만큼의 길이를 갖는 임의의 문자열을 반환하는 함수를 작성하세요.
