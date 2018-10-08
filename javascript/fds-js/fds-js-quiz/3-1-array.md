@@ -111,7 +111,104 @@ bingo([
   [0, 1, 1]
 ]) // -> true
 ```
+```js
+// bingo([
+//   [0, 1, 0],
+//   [0, 1, 1],
+//   [0, 0, 1]
+// ]) // -> false
 
+// bingo([
+//   [1, 1, 0],
+//   [0, 1, 1],
+//   [0, 0, 1]
+// ]) // -> true
+
+// bingo([
+//   [0, 1, 0],
+//   [0, 1, 1],
+//   [0, 1, 1]
+// ]) // -> true
+
+
+// 가로 빙고
+// 1) arr[0][0] === arr[0][1] && arr[0][0] === arr[0][2]
+// 2) arr[1][0] === arr[1][1] && arr[1][0] === arr[1][2]
+// 3) arr[2][0] === arr[2][1] && arr[2][0] === arr[2][2]
+
+// 세로 빙고
+// 1) arr[0][0] === arr[1][0] && arr[0][0] === arr[2][0]
+// 2) arr[0][1] === arr[1][1] && arr[0][1] === arr[2][1]
+// 3) arr[0][2] === arr[1][2] && arr[0][2] === arr[2][2]
+
+// 대각선 빙고
+// 1) arr[0][0] === arr[1][1] && arr[0][0] === arr[2][2]
+// 2) arr[0][2] === arr[1][1] && arr[0][2] === arr[2][0]
+
+function bingo(arr) {
+  let colBool = false;
+  let rowBool = false;
+  let crossLeftBool = false;
+  let crossRightBool = false;
+
+  // 가로빙고
+  arr.map((item,index) => {
+    if(item.every(item => item === 1)){
+      colBool = true;
+    }
+    return item;
+  },[]);
+
+  // 세로빙고
+  const verticalArr = [];
+  for(let i=0; i<arr.length; i++){
+    for(let j=0; j<arr.length; j++){
+      console.log(arr[i][j]);
+    }
+  }
+  
+  
+  // 대각선
+  const crossArr = [];
+  arr.map((item, index) => {
+    crossArr.push(item[index]);
+  });
+  if(crossArr.every(item => item === 1)){
+    crossLeftBool = true;
+  }
+
+  // 리버스 대각선
+  const crossReverseArr = [];
+  arr.reverse().map((item, index) => {
+    crossReverseArr.push(item[index]);
+  });
+  if(crossReverseArr.every(item => item === 1)){
+    crossRightBool = true;
+  }
+  
+  if(colBool || crossLeftBool || rowBool || crossRightBool){
+    console.log('bingo')
+  }else{
+    console.log('not bingo')
+  }
+  
+}
+
+bingo([
+  [0, 1, 1],
+  [0, 0, 1],
+  [1, 0, 1]
+]);
+
+// arr.reduce((acc, item) => {
+//   if(!acc[item]){
+//     acc[item] = 1;
+//   }else{
+//     acc[item] += 1;
+//   }
+//   return acc;
+// },{})
+```
 ---
 
 문제 6. (9 * 9) 오목 판이 배열에 저장되어 있습니다. 흑이 이긴 경우 1, 백이 이긴 경우 2, 아무도 이기지 않은 경우 0을 반환하는 함수를 작성하세요. (단, 칸이 비어있는 경우는 0, 흑은 1, 백은 2로 표현합니다.)
