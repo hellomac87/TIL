@@ -33,11 +33,38 @@ random(-10, 10);
 ceilBy5(32); -> 35
 ceilBy5(37); -> 40
 ```
+```js
+function ceilBy5(num){
+  let result = Math.ceil(num / 5) * 5;
+  return result;
+}
+ceilBy5(32); // 35
+//ceilBy5(37); // 40
+```
 
 ### 문제 4
 
 배열을 입력받아, 요소들의 순서를 뒤섞은 새 배열을 반환하는 함수를 작성하세요.
+```js
+function shuffle(arr) {
+    const newArr = [];
+    let index;
+    let memory = [];
 
+    for(let i=0; i<arr.length; i++){
+      // 인덱스 값 생성 1~10 사이의 무작위 값
+      index = Math.floor(Math.random() * arr.length);
+      if(memory.includes(index)){ 
+       i-- 
+      }else{
+        memory.push(index);
+        newArr.push(arr[index]);
+      }      
+    }
+    return newArr;
+}
+shuffle([1,2,3,4,5,6,7,8,9,10]);
+```
 ### 문제 5
 
 임의의 HTML 색상 코드를 반환하는 함수를 작성하세요.

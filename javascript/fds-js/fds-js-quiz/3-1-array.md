@@ -111,21 +111,8 @@ bingo([
   [0, 1, 1]
 ]) // -> true
 ```
+
 ```js
-// 가로 빙고
-// 1) arr[0][0] === arr[0][1] && arr[0][0] === arr[0][2]
-// 2) arr[1][0] === arr[1][1] && arr[1][0] === arr[1][2]
-// 3) arr[2][0] === arr[2][1] && arr[2][0] === arr[2][2]
-
-// 세로 빙고
-// 1) arr[0][0] === arr[1][0] && arr[0][0] === arr[2][0]
-// 2) arr[0][1] === arr[1][1] && arr[0][1] === arr[2][1]
-// 3) arr[0][2] === arr[1][2] && arr[0][2] === arr[2][2]
-
-// 대각선 빙고
-// 1) arr[0][0] === arr[1][1] && arr[0][0] === arr[2][2]
-// 2) arr[0][2] === arr[1][1] && arr[0][2] === arr[2][0]
-
 function bingo(arr) {
   let colBool = false;
   let rowBool = false;
@@ -141,12 +128,21 @@ function bingo(arr) {
   },[]);
 
   // 세로빙고
-  const verticalArr = [];
+  let counter = 0;
   for(let i=0; i<arr.length; i++){
     for(let j=0; j<arr.length; j++){
-      console.log(arr[i][j]);
+      if(arr[j][i] === 1){
+        counter++;
+      }    
+    }
+    
+    if(counter === 3){
+      rowBool = true;
+    }else{
+      counter = 0;
     }
   }
+  
     
   // 대각선
   const crossArr = [];
@@ -178,15 +174,6 @@ bingo([
   [0, 0, 1],
   [1, 0, 1]
 ]);
-
-// arr.reduce((acc, item) => {
-//   if(!acc[item]){
-//     acc[item] = 1;
-//   }else{
-//     acc[item] += 1;
-//   }
-//   return acc;
-// },{})
 ```
 ---
 
