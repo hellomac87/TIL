@@ -69,8 +69,23 @@ function shuffle(arr) {
 }
 shuffle([1,2,3,4,5,6,7,8,9,10]);
 ```
+
 #### 강사님과 함께 풀어보기
 ```js
+function shuffle(arr){
+  const newArr = [];
+  const length = arr.length;
+  
+  for(let i=0; i< length; i++){
+    let shuffleIndex = Math.floor(Math.random() * arr.length);
+    newArr.push(arr[shuffleIndex]);
+    arr.splice(shuffleIndex, 1);
+  }
+
+  return newArr;
+}
+
+shuffle([1,2,3,4,5,6,7,8,9,10]);
 ```
 
 ### 문제 5
