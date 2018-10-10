@@ -41,30 +41,38 @@ function ceilBy5(num){
 ceilBy5(32); // 35
 //ceilBy5(37); // 40
 ```
-
+#### 강사님과 함께 풀어보기
+```js
+// 같다
+```
 ### 문제 4
 
 배열을 입력받아, 요소들의 순서를 뒤섞은 새 배열을 반환하는 함수를 작성하세요.
 ```js
 function shuffle(arr) {
-    const newArr = [];
-    let index;
-    let memory = [];
+  const newArr = [];
+  const memory = [];
+  let index;
 
-    for(let i=0; i<arr.length; i++){
-      // 인덱스 값 생성 1~10 사이의 무작위 값
-      index = Math.floor(Math.random() * arr.length);
-      if(memory.includes(index)){ 
-       i-- 
-      }else{
-        memory.push(index);
-        newArr.push(arr[index]);
-      }      
-    }
-    return newArr;
+  for(let i=0; i<arr.length; i++){
+    index = Math.floor(Math.random() * arr.length);
+    
+    if(!memory.includes(index)){ 
+      memory.push(index);
+      newArr.push(arr[index]);
+    }else{
+      i--  
+    }      
+  }
+  
+  return newArr;
 }
 shuffle([1,2,3,4,5,6,7,8,9,10]);
 ```
+#### 강사님과 함께 풀어보기
+```js
+```
+
 ### 문제 5
 
 임의의 HTML 색상 코드를 반환하는 함수를 작성하세요.
@@ -79,6 +87,21 @@ function makeColor(){
 }
 
 makeColor();
+```
+#### 강사님과 함께 풀어보기
+```js
+function randomColor(){
+  const cadidate = '0123456789ABCDEF';
+  let colorCode = '#'
+
+  for(let i=0; i<6; i++){
+    const index = Math.floor(Math.random() * cadidate.length);;
+    colorCode += cadidate[index];
+  }
+
+  return colorCode;
+}
+randomColor();
 ```
 ### 문제 6
 
@@ -99,7 +122,21 @@ function handleString(num){
 
 handleString(5);
 ```
+#### 강사님과 함께 풀어보기
+```js
+function handleString(num){
+  let newStr = '';
 
+  for(let i=0; i < num; i++){
+    let index = Math.floor(Math.random() * 65535);
+    newStr += String.fromCodePoint(index);
+  }
+
+  console.log(newStr);
+}
+
+handleString(5);
+```
 ### 문제 7
 
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 표준편차를 구하는 함수를 작성하세요.
