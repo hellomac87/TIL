@@ -170,14 +170,56 @@ function bingo(arr) {
 }
 
 bingo([
-  [0, 1, 1],
+  [1, 1, 0],
   [0, 0, 1],
   [1, 0, 1]
 ]);
 ```
+
+
+```js
+//가로
+function bingo(arr){
+  // 한줄루프
+  for(let i=0; i<arr.length; i++){
+    let checked = true;
+    //한칸루프
+    for(let j=0; j<arr.length; j++){
+      if(arr[i][j] === 0){
+        checked = false;
+      }
+    }
+    if(checked){
+      return true;
+    }
+  }
+}
+// 세로
+function bingo(arr){
+  for(let i=0; i<arr.length; i++){
+    let checked = true;
+    for(let j=0; j<arr.length; j++){
+      if(arr[j][i] === 0){
+        checked = false;
+      }
+    }
+    if(checked){
+      return true;
+    }
+  }
+}
+```
 ---
 
 문제 6. (9 * 9) 오목 판이 배열에 저장되어 있습니다. 흑이 이긴 경우 1, 백이 이긴 경우 2, 아무도 이기지 않은 경우 0을 반환하는 함수를 작성하세요. (단, 칸이 비어있는 경우는 0, 흑은 1, 백은 2로 표현합니다.)
+
+> 가로방향 오목만 판별해보쟈 
+
+- 한칸한칸 보면서 판별하기
+- 한칸한칸 보면서 지금까지 본 x or o 의 갯수를 기억한다.
+- x or o 의 갯수를 기억하다가
+- x or o 가 다섯개 연속이면!
+- `내가 본 플레이어가 몇번 연속?`
 
 예:
 
@@ -224,9 +266,48 @@ omok([
 // 백이 이긴 경우 2, 
 // 아무도 이기지 않은 경우 0을 반환하는 함수를 작성하세요. 
 // (단, 칸이 비어있는 경우는 0, 흑은 1, 백은 2로 표현합니다.)
+
+// > 가로방향 오목만 판별해보쟈 
+
+// - 한칸한칸 보면서 판별하기
+// - 한칸한칸 보면서 지금까지 본 x or o 의 갯수를 기억한다.
+// - x or o 의 갯수를 기억하다가
+// - x or o 가 다섯개 연속이면!
+// - `내가 본 플레이어가 몇번 연속?`
 function omok(arr){
-  return arr;
+  for(let i=0; i<arr.length; i++){
+    let xNum = 0;
+    let oNum = 0;
+
+    for(let j=0; j<arr.length; j++){
+      if(arr[j][i] === 1){
+        xNum++;
+      }else if(arr[j][i] === 2){
+        oNum++;
+      }
+    }
+
+    if(xNum === 5){
+      console.log('xxxxxxxx')
+    }else if(oNum === 5){
+      console.log('oooooooo')
+    }
+  }
+  
 }
+
+omok([
+  [0, 0, 1, 2, 1, 1, 1, 2, 0,],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0,],
+  [0, 0, 1, 0, 0, 0, 2, 0, 0,],
+  [0, 0, 0, 1, 0, 0, 2, 0, 0,],
+  [0, 0, 0, 1, 1, 0, 2, 0, 0,],
+  [0, 0, 0, 1, 0, 1, 2, 0, 0,],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0,],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0,],
+  [2, 2, 2, 2, 0, 0, 0, 0, 0,]
+]) // -> 0
+
 ```
 ---
 
