@@ -47,6 +47,10 @@ Application Programming Interface.
 - `el.textContent` - 요소 본문을 가져오거나 변경할 때 사용하는 속성 (텍스트)
 - `el.innerHTML` - 요소 본문을 가져오거나 변경할 때 사용하는 속성 (HTML)
 
+> 사용자로부터 입력받은 텍스트를 innetHTML 에 대입해서는 `***절대로***`안됩니당.
+
+> Cross-site Scripting (XSS)
+
 <!-- innerHTML과 XSS -->
 
 ---
