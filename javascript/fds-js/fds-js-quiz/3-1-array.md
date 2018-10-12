@@ -208,6 +208,38 @@ function bingo(arr){
     }
   }
 }
+// 대각선
+function bingo(arr){
+  for(let i=0; i<arr.length; i++){
+    let checked = true;
+    
+    if(arr[i][i] === 0){
+      checked = false;
+    }
+    
+    if(checked){
+      return true;
+    }
+    return false;
+  }
+}
+
+// 리버스대각선
+function bingo(arr){
+  for(let i=0; i<arr.length; i++){
+    
+    let checked = true;
+    
+    if(arr[i][2 - i] === 0){
+      checked = false;
+    }
+    
+    if(checked){
+      return true;
+    }
+    return false;
+  }
+}
 ```
 ---
 
@@ -261,10 +293,7 @@ omok([
 ]) // -> 2
 ```
 ```js
-// 문제 6. (9 * 9) 오목 판이 배열에 저장되어 있습니다. 
-// 흑이 이긴 경우 1, 
-// 백이 이긴 경우 2, 
-// 아무도 이기지 않은 경우 0을 반환하는 함수를 작성하세요. 
+// 흑이 이긴 경우 1, 백이 이긴 경우 2, 아무도 이기지 않은 경우 0을 반환
 // (단, 칸이 비어있는 경우는 0, 흑은 1, 백은 2로 표현합니다.)
 
 // > 가로방향 오목만 판별해보쟈 
@@ -276,36 +305,166 @@ omok([
 // - `내가 본 플레이어가 몇번 연속?`
 function omok(arr){
   for(let i=0; i<arr.length; i++){
-    let xNum = 0;
-    let oNum = 0;
+    let player1 = 0;
+    let player2 = 0;
 
     for(let j=0; j<arr.length; j++){
       if(arr[j][i] === 1){
-        xNum++;
+        player1++;
+        player2 = 0;
       }else if(arr[j][i] === 2){
-        oNum++;
+        player2++;
+        player1 = 0;
       }
     }
 
-    if(xNum === 5){
-      console.log('xxxxxxxx')
-    }else if(oNum === 5){
-      console.log('oooooooo')
+    if(player1 === 5){
+      return 'player1';
+    }else if(player2 === 5){
+      return 'player2';
+    }
+  }
+  
+}
+
+function omok(arr){
+  for(let i=0; i<arr.length; i++){
+    let player1 = 0;
+    let player2 = 0;
+
+    for(let j=0; j<arr.length; j++){
+      if(arr[j][j+i] === 1){
+        player1++;
+        player2 = 0;
+      }
+      if(arr[j][j+i] === 2){
+        player2++; 
+        player1 = 0;
+      }
+    }
+
+    if(player1 === 5){
+      return 'player1';
+    }
+    if(player2 === 5){
+      return 'player2';
+    }
+
+  }
+}
+
+omok([
+  [0, 0, 1, 2, 2, 1, 1, 2, 0,],
+  [0, 0, 0, 0, 2, 0, 0, 0, 0,],
+  [0, 0, 1, 0, 2, 0, 2, 0, 0,],
+  [0, 0, 0, 0, 2, 0, 2, 0, 0,],
+  [0, 0, 0, 1, 2, 0, 2, 0, 0,],
+  [0, 0, 0, 1, 0, 1, 2, 0, 0,],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0,],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0,],
+  [2, 2, 2, 2, 0, 0, 0, 0, 0,]
+]) // -> 0
+
+```
+```js
+// 흑이 이긴 경우 1, 백이 이긴 경우 2, 아무도 이기지 않은 경우 0을 반환
+// (단, 칸이 비어있는 경우는 0, 흑은 1, 백은 2로 표현합니다.)
+
+// > 가로방향 오목만 판별해보쟈 
+
+// - 한칸한칸 보면서 판별하기
+// - 한칸한칸 보면서 지금까지 본 x or o 의 갯수를 기억한다.
+// - x or o 의 갯수를 기억하다가
+// - x or o 가 다섯개 연속이면!
+// - `내가 본 플레이어가 몇번 연속?`
+function omok(arr){
+  // 가로
+  for(let i=0; i<arr.length; i++){
+    let currentPlayer;
+    let count;
+
+    for(let j=0; j<arr.length; j++){
+      if(currentPlayer !== arr[i][j]){
+        currentPlayer = arr[i][j];
+        count = 1;
+      }else{
+        count++;
+      }
+
+      if((currentPlayer === 1 || currentPlayer === 2 ) && count === 5){
+        return currentPlayer;
+      }
+    }
+  }
+
+  // 세로
+  for(let i=0; i<arr.length; i++){
+    let currentPlayer;
+    let count;
+
+    for(let j=0; j<arr.length; j++){
+      if(currentPlayer !== arr[j][i]){
+        currentPlayer = arr[j][i];
+        count = 1;
+      }else{
+        count++;
+      }
+
+      if((currentPlayer === 1 || currentPlayer === 2 ) && count === 5){
+        return currentPlayer;
+      }
+    }
+  }
+
+  // 대각선
+  for(let i=0; i<arr.length; i++){
+    let currentPlayer;
+    let count;
+
+    for(let j=0; j<arr.length; j++){
+      if(currentPlayer !== arr[j][j+i]){
+        currentPlayer = arr[j][j+i];
+        count = 1;
+      }else{
+        count++;
+      }
+
+      if((currentPlayer === 1 || currentPlayer === 2 ) && count === 5){
+        return currentPlayer;
+      }
+    }
+  }
+
+  for(let i=0; i<arr.length; i++){
+    let currentPlayer;
+    let count;
+
+    for(let j=0; j<arr.length; j++){
+      if(currentPlayer !== arr[j][j-i]){
+        currentPlayer = arr[j][j-i];
+        count = 1;
+      }else{
+        count++;
+      }
+
+      if((currentPlayer === 1 || currentPlayer === 2 ) && count === 5){
+        return currentPlayer;
+      }
     }
   }
   
 }
 
 omok([
-  [0, 0, 1, 2, 1, 1, 1, 2, 0,],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0,],
-  [0, 0, 1, 0, 0, 0, 2, 0, 0,],
-  [0, 0, 0, 1, 0, 0, 2, 0, 0,],
-  [0, 0, 0, 1, 1, 0, 2, 0, 0,],
-  [0, 0, 0, 1, 0, 1, 2, 0, 0,],
-  [0, 0, 0, 1, 0, 0, 0, 0, 0,],
-  [0, 0, 0, 1, 0, 0, 0, 0, 0,],
-  [2, 2, 2, 2, 0, 0, 0, 0, 0,]
+  [1, 1, 1, 1, 1, 2, 1, 2, 0],
+  [0, 0, 0, 0, 1, 2, 0, 0, 0],
+  [0, 0, 1, 0, 2, 1, 2, 0, 0],
+  [0, 0, 0, 0, 2, 0, 1, 2, 0],
+  [0, 0, 0, 1, 2, 0, 2, 2, 2],
+  [1, 0, 1, 1, 1, 1, 2, 0, 1],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0],
+  [2, 2, 2, 2, 0, 0, 0, 0, 0]
 ]) // -> 0
 
 ```
