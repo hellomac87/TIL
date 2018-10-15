@@ -1,4 +1,4 @@
-#Babel + Webpack 을 사용하여 es6 환경 구축하기
+# Babel + Webpack 을 사용하여 es6 환경 구축하기
 
 현재 브라우저는 ES6를 완전하게 지원하지 않는다.
 
@@ -19,3 +19,5 @@ $ npm install babel-cli --save-dev
 # babel 7
 $ npm install @babel/cli --save-dev
 ```
+
+## babelrc 설정 파일 작성
