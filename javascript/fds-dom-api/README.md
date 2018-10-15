@@ -47,12 +47,11 @@ Application Programming Interface.
 - `el.textContent` - 요소 본문을 가져오거나 변경할 때 사용하는 속성 (텍스트)
 - `el.innerHTML` - 요소 본문을 가져오거나 변경할 때 사용하는 속성 (HTML)
 
+innerHTML과 XSS
+
 > 사용자로부터 입력받은 텍스트를 innetHTML 에 대입해서는 `***절대로***`안됩니당.
 
 > Cross-site Scripting (XSS)
-
-<!-- innerHTML과 XSS -->
-
 ---
 
 ## 요소 어트리뷰트 조작하기
@@ -100,7 +99,13 @@ Application Programming Interface.
 - `el.replaceChild(newChild, oldChild)` - 자식 요소를 교체하기
 - `el.removeChild(child)` - 자식 요소 제거하기
 
-<!-- appendChild, insertBefore를 통한 위치의 이동 -->
+`appendChild`, `insertBefore`를 통한 위치의 이동
+
+> 이미 존재하는 문서안의 객체를 호출하면, 그 객체를 복사하지 않고 그 자체를 이동시킨다.
+
+> 요소의 위치를 이동시킬 때 사용된다.
+
+
 
 ---
 
