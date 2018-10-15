@@ -14,6 +14,7 @@ Babel은 트랜스파일러(Transpiler)로서 ES6를 ES5 이하의 버전으로 
 $ mkdir es6-project && cd es6-project
 $ npm init -y
 $ npm install babel-cli --save-dev
+$ npm install --save-dev babel-preset-es2015;
 ```
 
 ## 2. babelrc 설정 파일 작성
@@ -28,7 +29,8 @@ $ npm install babel-preset-env --save-dev
   "version": "1.0.0",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
   }
 }
 ```
