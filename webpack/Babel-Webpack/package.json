@@ -1,0 +1,16 @@
+{
+  "name": "babel-webpack",
+  "version": "1.0.0",
+  "description": "현재 브라우저는 ES6를 완전하게 지원하지 않는다.",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
