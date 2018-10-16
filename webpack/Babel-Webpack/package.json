@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "현재 브라우저는 ES6를 완전하게 지원하지 않는다.",
   "scripts": {
-    "build": "babel src/js -w -d dist/js"
+    "build": "webpack -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }

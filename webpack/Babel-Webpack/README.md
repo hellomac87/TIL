@@ -52,3 +52,59 @@ $ npm run build
 src/js/lib.js -> dist/js/lib.js
 src/js/main.js -> dist/js/main.js
 ```
+
+### ES6 개발 환경 구축
+
+트랜스파일링에는 성공했으나, 과연 이것만가지고 브라우저에서 정상적으로 작동할까?
+
+> 어림없쬬?!
+
+### webpack
+
+현재 대부분의 브라우저는 ES6의 모듈을 지원하지 않고 있다. 따라서 ES6 모듈을 현재의 브라우저에서 사용하려면 RequireJS 또는 SystemJS와 같은 모듈 로더가 필요하다.
+
+`Webpack`은 의존 관계에 있는 모듈들을 하나의 자바스크립트 파일로 번들링하는 모듈 번들러이다. Webpack을 사용하면 의존 모듈이 하나의 파일로 번들링되므로 별도의 모듈 로더가 필요없다.
+
+```bash
+$ npm install webpack webpack-cli --save-dev
+$ npm install babel-loader --save-dev
+$ npm install babel-loader@7 --save-dev;
+```
+
+```json
+{
+  "scripts": {
+    "build": "webpack -w"
+  },
+}
+```
+
+```js
+const path = require('path');
+
+module.exports = {
+  entry: './src/js/entry.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist/js')
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      include: [
+        path.resolve(__dirname, 'src/js')
+      ],
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['env']
+          // babel 7: presets: ['@babel/preset-env']
+        }
+      }
+    }]
+  },
+  devtool: 'source-map',
+  mode: 'development'
+};
+```
