@@ -158,6 +158,30 @@ innerHTML과 XSS
 
 <!-- https://httpbin.org/ -->
 
+
+### elements
+
+```html
+<form method="get" action="https://httpbin.org/get">
+    <input type="text" name="id" required>
+    <input type="password" name="password" required>
+    <!--   <input type="submit" value="전송"> -->
+    <button>전송 </button>
+</form>
+```
+```js
+document.querySelector('form').addEventListener('submit', (e) => {
+  const elements = e.target.elements;
+  console.log(elements.id);
+  console.log(elements.password);
+});
+```
+
+- `elements`에는 특별한 객체가 들어있당
+- `elements`는 form 객체에만 들어있당
+- `elements.(form 객체의 name값)`에 접근 할 수 있다.
+- form 객체의 각 요소를 전부 변수로 할당해 사용하는 것 보다 편하게 사용 할 수 있음
+
 ---
 
 ## 마우스 이벤트
