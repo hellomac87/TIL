@@ -28,5 +28,5 @@ html 과정이 끝나고 김승하 강사님께 요청하여, 공부 방법 등�
 2018-10-16| rgb-challenge | iterable | x | movie-app | webpack | - |
 2018-10-17| bingo, baseball | 함수 | x | movie-app | baseball | 책 너무어려워여 |
 2018-10-18| js quiz | 너무어렵다 | js quiz | movie-app | x | - |
-2018-10-19| - | - | - | - | - | - |
+2018-10-19| omok hkt | x | omok hkt | movie-app  | x | - |
 
