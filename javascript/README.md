@@ -77,12 +77,12 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 1) school : hellojavascriptworld 복습, break week 과제 해보기
 2) alogorithm : 오목 승리 알고리즘 작성(대각선)
 3) javaScript theory : 러닝 자바스크립트 책 학습.
-4) react : react context api 학습 (노마드코더 강좌)
+4) react : react context api 학습 (노마드코더 강좌), [velopert context api 포스팅](https://velopert.com/3606)
 5) build tool : babel, webpack, parcel 익히기
 
 
 | 날짜 | school | alogorithm | javaScript theory | react | build tool | note |
 |-----|--------|-------------|--------|------|-------|-------|
-| - | - | - | - | - | - | - |
+| 2018-10-22 | x | 오목 대각선 알고리즘 작성 | x | context-api | x | 오목 알고리즘이 생각보다 일찍끝나서 대안을 찾아봐야한다. |
 
 
