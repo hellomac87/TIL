@@ -84,5 +84,9 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 | 날짜 | school | alogorithm | javaScript theory | react | build tool | note |
 |-----|--------|-------------|--------|------|-------|-------|
 | 2018-10-22 | x | 오목 대각선 알고리즘 작성 | x | context-api | x | 오목 알고리즘이 생각보다 일찍끝나서 대안을 찾아봐야한다. |
+| 2018-10-23 | x | x | x | context-api | x | note |
+| 2018-10-24 | x | x | x | context-api | x | note |
+| 날짜 | school | alogorithm | javaScript theory | react | build tool | note |
+| 날짜 | school | alogorithm | javaScript theory | react | build tool | note |
 
 
