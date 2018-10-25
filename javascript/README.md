@@ -75,7 +75,7 @@ html 과정이 끝나고 김승하 강사님께 요청하여, 공부 방법 등�
 fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 않고, 목금은 해커톤을 진행한다.
 
 1) school : hellojavascriptworld 복습, break week 과제 해보기
-2) alogorithm : 오목 승리 알고리즘 작성(대각선)
+2) algorithm : 오목 승리 알고리즘 작성(대각선), 15 puzzle algorithm
 3) javaScript theory : 러닝 자바스크립트 책 학습.
 4) react : react context api 학습 (노마드코더 강좌), [velopert context api 포스팅](https://velopert.com/3606)
 5) build tool : babel, webpack, parcel 익히기
@@ -86,7 +86,7 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 | 2018-10-22 | x | 오목 대각선 알고리즘 작성 | x | context-api | x | 오목 알고리즘이 생각보다 일찍끝나서 대안을 찾아봐야한다. |
 | 2018-10-23 | x | x | x | context-api | x | note |
 | 2018-10-24 | x | x | x | context-api | x | note |
-| 날짜 | school | alogorithm | javaScript theory | react | build tool | note |
+| 2018-10-25 | hackathon | 15 puzzle | promise | context-api | build tool | note |
 | 날짜 | school | alogorithm | javaScript theory | react | build tool | note |
 
 
