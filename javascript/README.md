@@ -88,6 +88,7 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 | 2018-10-24 | x | x | x | context-api | x | note |
 | 2018-10-25 | hackathon | 15 puzzle | promise | context-api | x | note |
 | 2018-10-26 | hackathon | 15 puzzle | x | x | x | note |
-| 2018-10-27 | hellojavascriptworld | 15 puzzle | - | - | - | note |
+| 2018-10-27 | hellojavascriptworld | 15 puzzle | x | x | x | note |
+| 2018-10-28 | hellojavascriptworld | x | x | x | x | note |
 
 
