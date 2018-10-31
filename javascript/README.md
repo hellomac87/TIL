@@ -141,7 +141,7 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 |-----|-----------|------------|--------|-------|------|
 | 2018-10-29 | 추추트레인 | 함수 더 알아보기, Iterable | 강좌살펴보기 | redux | - |
 | 2018-10-30 | 만들수있는거죠 | class | x | x | - |
-| 2018-10-31 | - | - | - | - | - |
+| 2018-10-31 | 뭐하조 | javascript 큐, 스택, 트리, 비동기 프로그래밍 복습 | Cookie,Ajax,CORS,JWT 복습 | redux | - |
 | 2018-11-01 | - | - | - | - | 강의 없는 날 |
 | 2018-11-02 | - | - | - | - | - |
 | 2018-11-03 | - | - | - | - | - |
@@ -149,7 +149,11 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 
 2018-10-30 
 프로토타입, class 부분 예습복습하쟝
-
+2018-10-31
+hackathon 
+javascript 큐, 스택, 트리, 비동기 프로그래밍 복습
+nodejs Cookie,Ajax,CORS,JWT 복습
+react 리듀서강좌
 ---
 
 #### hackathon
@@ -160,3 +164,4 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 
 - 추추트레인(https://github.com/victoryjkkim92/number_baseballgame)[https://github.com/victoryjkkim92/number_baseballgame]
 - 만들수있는거죠(https://github.com/yoeubi/fds11-hackathon)[https://github.com/yoeubi/fds11-hackathon]
+- 뭐하조(https://github.com/jyansol/game)[https://github.com/jyansol/game]
