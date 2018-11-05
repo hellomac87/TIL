@@ -142,18 +142,39 @@ fds11 break week 이다. 월화수 3일간 break day로 수업을 진행하지 �
 | 2018-10-29 | 추추트레인 | 함수 더 알아보기, Iterable | 강좌살펴보기 | redux | - |
 | 2018-10-30 | 만들수있는거죠 | class | x | x | - |
 | 2018-10-31 | 뭐하조 | javascript 큐, 스택, 트리, 비동기 프로그래밍 복습 | Cookie,Ajax,CORS,JWT 복습 | redux | - |
-| 2018-11-01 | - | - | - | - | 강의 없는 날 |
-| 2018-11-02 | - | - | - | - | - |
-| 2018-11-03 | - | - | - | - | - |
-| 2018-11-04 | - | - | - | - | - |
+| 2018-11-01 | 공포의 외인구단 | class,큐/스택/트리,비동기프로그래밍 | Cookie,Ajax,CORS,JWT | - | 강의 없는 날 |
+| 2018-11-02 | x | x | x | x | - |
+| 2018-11-03 | x | promise | x | x | - |
+| 2018-11-04 | x | x | x | x | x |
 
 2018-10-30 
 프로토타입, class 부분 예습복습하쟝
+
 2018-10-31
 hackathon 
 javascript 큐, 스택, 트리, 비동기 프로그래밍 복습
 nodejs Cookie,Ajax,CORS,JWT 복습
 react 리듀서강좌
+
+2018-11-01
+onlyMan
+javascript class, 큐/스택/트리, 비동기 프로그래밍 복습, 비동기 예습
+Cookie,Ajax,CORS,JWT 복습
+redux
+
+2018-11-03
+- 카이사르사이퍼
+- 비동기 프로그래밍 복습
+- 오늘 비동기코드 작성했던거 쭉 다시 따라해보기
+비동기 프로그래밍 복습  
+(axios사용법)[https://github.com/axios/axios]
+(json server)[https://github.com/typicode/json-server]
+(fds json server)[https://www.npmjs.com/package/fds-json-server]
+postman
+repl
+codepen
+fds json server 글리치에서 구동 후
+fds 프로젝트 템플릿에서 구현해보깅
 ---
 
 #### hackathon
@@ -162,6 +183,54 @@ react 리듀서강좌
 
 (https://docs.google.com/spreadsheets/d/1v_F9gtPEJYPWW01PcLUS604vHklGa0pHRjht3GZrVHk/edit#gid=0)[https://docs.google.com/spreadsheets/d/1v_F9gtPEJYPWW01PcLUS604vHklGa0pHRjht3GZrVHk/edit#gid=0]
 
-- 추추트레인(https://github.com/victoryjkkim92/number_baseballgame)[https://github.com/victoryjkkim92/number_baseballgame]
-- 만들수있는거죠(https://github.com/yoeubi/fds11-hackathon)[https://github.com/yoeubi/fds11-hackathon]
-- 뭐하조(https://github.com/jyansol/game)[https://github.com/jyansol/game]
+- 추추트레인 (https://github.com/victoryjkkim92/number_baseballgame)[https://github.com/victoryjkkim92/number_baseballgame]
+- 만들수있는거죠 (https://github.com/yoeubi/fds11-hackathon)[https://github.com/yoeubi/fds11-hackathon]
+- 뭐하조 (https://github.com/jyansol/game)[https://github.com/jyansol/game]
+- 공포의 외인구단 (https://github.com/kimyunje/hackathon-baseball-game)[https://github.com/kimyunje/hackathon-baseball-game]
+
+---
+
+### 2018-10-4주차 ~ 2018-11-1주차 회고
+
+#### 1. 지난 한 주간 무슨 일이 있었나요? 자바스크립트 파트 때 배운 것과 스스로 만들어본 것, 공부한 것 등을 사실에 기반해서 적어주세요. *
+> Fact에 해당하는 항목입니다. *문장 형태*로 회고해 주세요. 감정, 교훈, 앞으로의 계획 등은 다음 문항에서 적을 예정입니다. 있었던 일/했던 일 위주로 적어 주세요.
+
+hackathon 다른조 프로젝트 분석 했고,
+자바스크립트 이론 공부를 hellojavascriptworld 교재와 러닝자바스크립트 책으로 했고,
+nodejs 및 http 를 fds11 학습자료로 공부했고,
+react-redux 연결에 대해 inflearn 강의로 공부했다.
+
+#### 2. 지난 한 주간 느낀 감정은 무엇이었나요? 어떤 느낌이 들었는지, 그리고 그 감정이 어떻게 변화되어 갔는지 적어 주세요. *
+> Feeling에 해당하는 항목입니다. 감정과 느낌 위주로 적어 주세요. 변화된 감정이나 현재 느끼는 감정을 적되, 긍정적인 방향에서 감정을 회고해보세요. 어떤 교훈을 얻고 구체적으로 어떤 생각이 들었는지는 다음 문항에 적을 예정입니다.
+
+#### 3. 어떤 교훈을 얻었나요? 새롭게 배우거나 알게된 점이 있나요? 깨달음을 얻은 것이 있다면 적어 주세요. *
+> Finding에 해당하는 항목입니다. 자기 자신에 대해, 공부 방법에 대해, 혹은 프로그래밍에 대해 새롭게 깨달음을 얻거나 배운 점이 있다면 적어 주세요.
+
+결과물이 보이지 않는 이론을 공부하는 것은 힘든 일이다. 추상적 개념들의 자바스크립트 이론은 이해하기 어렵다. 
+
+어떤 강박이 있었다. 스쿨 기간 내에 자바스크립트를 마스터해야한다는 강박. 그런것들이 조금 사라졌다.
+
+개발자라는 직군이 평생 공부하는 것이고, 프론트엔드 개발자로써 자바스크립트는 꾸준히 공부해야하는 언어다. 좀더 여유를 갖게 되었다.
+
+오만함이 되지않길 경계해야 할 것같다.
+
+#### 4. 지난 4주차 회고 때 세웠던 계획은 어떻게 실행 되었나요? 긍정적인 측면과 개선해야 할 부분이 무엇인지 등 계획 실행 여부에 대한 피드백을 적어 주세요. *
+
+늘 그렇듯 계획한대로 수행하지 못했다. 여러가지 변수들이 존재했고, 컨디션도 매일 달랐다. 의지력도 매일 달랐고, 여전히 핑계였다.
+조금 더 본질에 집줍할 수 있으면서, 구체적인 계획으로 개선해 나가야 한다. 세운 목표는 꼭 하고 자자.
+
+#### 5. 지금까지의 경험을 바탕으로, 앞으로는 어떻게 해볼 예정인가요? *
+> Future Action Plan에 해당하는 항목입니다. 행동 계획은 추상적이면 안됩니다. "앞으로는 남들과 잘 어울리자" 같은 내용은 구체적인 액션이 드러나지 않기 때에 좋은 행동 계획이 아닙니다. 구체적이고, 단순하며, 실제로 했는지 안했는지 여부를 객관적으로 쉽게 판단할 수 있도록 적어 주세요. 이후 4번에 대한 실행 결과를 스스로에게 피드백해보는 시간을 가질 예정입니다.
+
+mid-project : 프로젝트의 필수사항 구현에집중한다. 퀄리티있게 나올 수 있도록 신경써서 만들자.
+javascript : 실습 프로젝트 기간에는 이론이나 알고리즘에 소흘해지기 마련이다. 아침 알고리즘 시간에 집중하고, 이론도 한번 더 복습한다. 한번 정리할떄가 된듯하다.
+react : redux 강의를 가볍게 듣자.
+항목은 줄었지만, 그 양은 상당히 많을 것으로 보인다. 게다가 팀프로젝트라는 변수도 있다. 최대한 성실하게 하자.
+---
+
+## 2018-11-2주차 
+
+|     날짜    | mid-project | javascript | react | note |
+|------------|-------------|------------|-------|------|
+| 2018-11-06 | x | axios-todolist | x | - |
+
