@@ -233,4 +233,11 @@ react : redux 강의를 가볍게 듣자.
 |     날짜    | mid-project | javascript | react | note |
 |------------|-------------|------------|-------|------|
 | 2018-11-06 | x | axios-todolist | x | - |
+| 2018-11-06 | 게시판 템플릿 나머지 기능 구현해보기 | algorithm | actions creators | - |
 
+2018-11-06 
+1) bob 알고리즘 풀기
+2) 게시판 템플릿 나머지 기능 구현해보기
+
+2018-11-07
+1) mid-project : 쇼핑몰 만들기 구현
