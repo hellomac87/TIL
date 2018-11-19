@@ -38,3 +38,74 @@ const circles = problems.map((problem, index) => {
 ```
 
 react 엘리먼트를 생성할때 인자로 인덱스 값을 넘김
+
+## 김승하 강사님 토글 클래스 예제
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+import classNames from "classnames";
+
+import "./styles.css";
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <Board />
+    </div>
+  );
+}
+
+class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttons: [
+        {
+          active: false
+        },
+        {
+          active: false
+        },
+        {
+          active: false
+        }
+      ]
+    };
+  }
+
+  handleClick(index) {
+    const newButtons = this.state.buttons.map((b, buttonIndex) => ({
+      active: buttonIndex === index ? true : false
+    }));
+    this.setState({
+      buttons: newButtons
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.buttons.map((b, index) => {
+          const className = classNames({ active: b.active });
+          return (
+            <div
+              className={className}
+              key={index}
+              onClick={() => this.handleClick(index)}
+            >
+              {index}
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+```
