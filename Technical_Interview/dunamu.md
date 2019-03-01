@@ -9,6 +9,7 @@ git
 
 html
 
+- html5 에서 doctype 작성 변경에 대해 설명해보아라.
 - section, article 태그의 사용법?
 - 검색 봇은 section을 우선하는가? article을 우선하는가?
 - image, css, js 등 의 소스를 어떻게 분류 할수 있는가?
